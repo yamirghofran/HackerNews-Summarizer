@@ -12,8 +12,11 @@ from openai import OpenAI
 import os
 from discord_webhook import DiscordWebhook
 
+YOUR_DISCORD_WEBHOOK_URL = "your discord webhook url here"
+YOUR_OPENAI_API_KEY = "your openai api key here"
+
 # OpenAI Configuration
-client = OpenAI(api_key="your_api_key")
+client = OpenAI(api_key=YOUR_OPENAI_API_KEY)
 
 def setup_driver():
     service = Service(ChromeDriverManager().install())
@@ -115,7 +118,7 @@ def analyze_with_openai(posts):
 
 def send_to_discord(content):
     try:
-        webhook = DiscordWebhook(url="your_discord_webhook_url", content=content)
+        webhook = DiscordWebhook(url=YOUR_DISCORD_WEBHOOK_URL, content=content)
         response = webhook.execute()
         if response.status_code == 204:  # Discord returns 204 on success
             print("Message sent successfully to Discord!")
