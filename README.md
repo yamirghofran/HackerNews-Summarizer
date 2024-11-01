@@ -1,3 +1,4 @@
+# HackerNews Summarizer With Python and Selenium
 Use Python and Selenium scraping to summarize HackerNews top posts with OpenAI GPT4o API and send it to a Discord Channel.
 
 Replace 
