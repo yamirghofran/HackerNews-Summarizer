@@ -96,7 +96,7 @@ def scrape_hn_posts(driver, num_posts=3):
     return posts
 
 def analyze_with_openai(posts):
-    prompt = "Analyze these Hacker News posts and provide a summary with key points for each:\n\n"
+    prompt = "Analyze these Hacker News posts and provide a summary with key points and provided links for each:\n\n"
     for post in posts:
         prompt += f"Title: {post['title']}\nLink: {post['link']}\nContent Preview: {post['content']}\n\n"
 
