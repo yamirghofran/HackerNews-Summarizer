@@ -21,7 +21,7 @@ def setup_driver():
     options.add_argument('--headless')  # Run in headless mode
     return webdriver.Chrome(service=service, options=options)
 
-def scrape_hn_posts(driver, num_posts=3):
+def scrape_hn_posts(driver, num_posts=5):
     driver.get('https://news.ycombinator.com/')
     posts = []
     current_posts = 0
